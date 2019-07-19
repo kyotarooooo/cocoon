@@ -1,0 +1,14 @@
+<%= form_for @coordinate do |f| %>
+  <%= f.label :本文 %>
+  <%= f.text_area :body %>
+
+  <%= f.fields_for :items do |item_fields| %>
+    <%= item_fields.label :アイテム名 %>
+    <%= item_fields.text_field :item_name %>
+
+    <%= item_fields.label :ブランド名 %>
+    <%= item_fields.text_field :brand %>
+  <% end %>
+
+  <%= f.submit "Submit" %>
+<% end %>
