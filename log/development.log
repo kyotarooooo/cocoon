@@ -243,3 +243,129 @@ Completed 200 OK in 306ms (Views: 222.6ms | ActiveRecord: 15.4ms)
 
   [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mCoordinate Load (2.3ms)[0m  [1m[34mSELECT  "coordinates".* FROM "coordinates" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-19 16:10:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P8VKGn49ADvJugOfBw3xOuq40fqTfohjY8/Bo63HbBfHbsf7R/qqefHO0ROVZ28ZQGx1LTAQE7P0Uhtq4QB4Lw==", "coordinate"=>{"body"=>"aaaaaa", "items_attributes"=>{"0"=>{"item_name"=>"aaaaa", "brand"=>"aaa"}}}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[36mCoordinate Create (6.4ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "body") VALUES (?, ?, ?)[0m  [["created_at", "2019-07-19 16:10:04.581185"], ["updated_at", "2019-07-19 16:10:04.581185"], ["body", "aaaaaa"]]
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("created_at", "updated_at", "item_name", "brand", "coordinate_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-19 16:10:04.590731"], ["updated_at", "2019-07-19 16:10:04.590731"], ["item_name", "aaaaa"], ["brand", "aaa"], ["coordinate_id", 2]]
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 23.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-19 16:10:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 764ms (Views: 741.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-19 16:13:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 748ms (Views: 725.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coordinates/new" for 10.0.2.2 at 2019-07-19 16:13:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#new as HTML
+  Rendering coordinates/new.html.erb within layouts/application
+  Rendered coordinates/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 315ms (Views: 235.6ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/coordinates" for 10.0.2.2 at 2019-07-19 16:14:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AA3MlOw6cuT8ZFXxymCy+SCvKal60bPDisoY3IIVvkb4pkF11f3YpsQQh31YCizainuNftm/KBMdV8IVztKqfg==", "coordinate"=>{"body"=>"indexページできたかな", "items_attributes"=>{"0"=>{"item_name"=>"コート", "brand"=>"aaa"}}}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[36mCoordinate Create (7.2ms)[0m  [1m[32mINSERT INTO "coordinates" ("created_at", "updated_at", "body") VALUES (?, ?, ?)[0m  [["created_at", "2019-07-19 16:14:26.693791"], ["updated_at", "2019-07-19 16:14:26.693791"], ["body", "indexページできたかな"]]
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("created_at", "updated_at", "item_name", "brand", "coordinate_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2019-07-19 16:14:26.704725"], ["updated_at", "2019-07-19 16:14:26.704725"], ["item_name", "コート"], ["brand", "aaa"], ["coordinate_id", 3]]
+  ↳ app/controllers/coordinates_controller.rb:9
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coordinates_controller.rb:9
+Redirected to http://localhost:3000/coordinates
+Completed 302 Found in 27ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-19 16:14:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (2.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 245ms (Views: 220.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-19 16:14:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 174ms (Views: 155.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-19 16:15:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 211ms (Views: 186.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-19 16:15:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (1.6ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 182ms (Views: 155.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/coordinates" for 10.0.2.2 at 2019-07-19 16:19:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CoordinatesController#index as HTML
+  Rendering coordinates/index.html.erb within layouts/application
+  [1m[36mCoordinate Load (1.7ms)[0m  [1m[34mSELECT "coordinates".* FROM "coordinates"[0m
+  ↳ app/views/coordinates/index.html.erb:3
+  Rendered coordinates/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 798ms (Views: 757.9ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-19 16:19:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 244ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-19 16:20:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:2
+  Rendered items/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 287ms (Views: 226.9ms | ActiveRecord: 5.7ms)
+
+

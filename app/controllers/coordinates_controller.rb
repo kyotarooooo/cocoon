@@ -8,10 +8,14 @@ class CoordinatesController < ApplicationController
 		@coordinate = Coordinate.new(coordinate_params)
 		if @coordinate.save
 			flash[:notice] = "コーディネートを登録しました"
-			redirect_to root_path
+			redirect_to coordinates_path
 		else
 			render 'new'
 		end
+	end
+
+	def index
+		@coordinates = Coordinate.all
 	end
 
 	private
